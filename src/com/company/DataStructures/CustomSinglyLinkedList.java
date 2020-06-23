@@ -61,13 +61,13 @@ public class CustomSinglyLinkedList {
     /*
         Search - Check if list contains element
      */
-    public boolean contains(ListNode searchedNode){
+    public boolean contains(int searchedValue){
 
-        if (size == 0 || searchedNode == null) return false;
+        if (size == 0) return false;
 
         ListNode temp = head;
         while (temp != null){
-            if (temp == searchedNode) return true;
+            if (temp.value == searchedValue) return true;
             temp = temp.next;
         }
         return false;
